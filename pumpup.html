@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City of Hamusit</title>
+    <link rel="stylesheet" href="pumpup.css">
+    <script src="pumpup.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to the City of Hamusit!</h1>
+        <section>
+            <h2 style="color:red;">
+                <span class="forward-backward-animation" lang="am">የነገዋን ዉብ ከተማችንን አስበዉ ዛሬ ኢንቨስት ያድርጉ!</span>
+            </h2>
+        </section>
+        <nav>
+            <a href="#" onclick="showContent('home')">Home</a>
+            <a href="#" onclick="showContent('about')">About Us</a>
+            <a href="#" onclick="showContent('mayor')">Current Affairs</a>
+            <a href="#" onclick="showContent('investment')">Investment Options</a>
+            <a href="#" onclick="toggleContent('contact')">Contact Us</a>
+            <a href="#" onclick="toggleContent('corruption')">Opinion</a>
+        </nav>
+    </header>
+
+    <main>
+        <div id="home" class="content-section" style="display: none;">
+            <div class="mayor-info">
+                <div class="mayor-photo">
+                    <img src="waliaibex.jpg" alt="Photograph of the Mayor">
+                </div>
+                <div class="mayor-details">
+                    <h4 style="color: rgba(0, 128, 0, 0.498);">የከንቲባዉ መልዕክት!</h4>
+                    <!-- The rest of the mayor's information -->
+                    <pre>
+                        Dear citizens of Hamusit, I am honored to serve as the mayor of this wonderful city. 
+                        Hamusit is a place of great potential, and together, we can achieve remarkable things.
+                        Our administration is committed to improving the quality of life for all residents,
+                        fostering economic growth, and creating a safe and inclusive community. 
+                        <!-- Add more information about the mayor -->
+                    </pre>
+                </div>
+            </div>
+        </div>
+        <div id="about" class="content-section" style="display: none;">
+            <section>
+                <h2>የሀሙሲት ከተማ አስተዳደር!</h2>
+            </section>
+            <pre>
+                Welcome to the City of Hamusit! Our city is known for its rich history, vibrant culture,
+                and stunning architecture. Whether you're a resident or a visitor, there's always something
+            </pre>
+        </div>
+
+        <div id="mayor" class="content-section" style="display: none;">
+            <section>
+                <h2>ወቅታዊ</h2>
+            </section>
+
+            <pre>
+                Dear citizens of Hamusit, I am honored to serve as the mayor of this wonderful city. 
+                Hamusit is a place of great potential, and together, we can achieve remarkable things.
+            </pre>
+        </div>
+
+        <div class="content-section" id="investmentApplication" style="display: none;">
+            <!--<a href="#" id="investmentApplicationButton" data-content="investmentOptions">Investment Options</a>-->
+            <div id="investmentOptions" class="content-section">
+                <h3 onclick="showDescription('1')" style="text-align: left;">አማራጭ 1</h3>
+                <p id="optionDescription-1" style="text-align: left;">ሆቴልና ቱሪዝም ዘርፍ</p>
+
+                <h3 onclick="showDescription('2')" style="text-align: left;">አማራጭ 2</h3>
+                <p id="optionDescription-2" style="text-align: left;">ትምህርትና ስልጠና ዘርፍ</p>
+
+                <h3 onclick="showDescription('3')" style="text-align: left;">አማራጭ 3</h3>
+                <p id="optionDescription-3" style="text-align: left;">አግሮ ፕሮሰሲንግ ዘርፍ</p>
+
+                <h3 onclick="showDescription('4')" style="text-align: left;">አማራጭ 4</h3>
+                <p id="optionDescription-4" style="text-align: left;">ሪልስቴት ዘርፍ</p>
+            </div>
+        </div>
+
+        <div id="contact" class="content-section" style="display: none;">
+            <form id="investmentForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" required>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div id="corruption" class="content-section" style="display: none;">
+            <section>
+                <h2>Report Corruption and Bad Governance</h2>
+            </section>
+            <p>Please choose one of the following options to report:</p>
+
+            <section>
+                <h3>Contact Information</h3>
+                <ul>
+                    <li>Phone: +1234567890</li>
+                    <li>Email: report@domain.com</li>
+                    <li>Online Form: <a href="#" onclick="toggleForm('reportForm')">Report Form</a></li>
+                </ul>
+            </section>
+
+            <p>Additionally, you can visit our office during working hours:</p>
+            <address>
+                Street Address<br>
+                City, State, ZIP<br>
+                Country
+            </address>
+
+            <form id="reportForm" action="submit_form.php" method="post" style="display: none;">
+                <label for="corruptionType">Type of Corruption:</label>
+                <input type="text" id="corruptionType" required>
+
+                <label for="description">Description:</label>
+                <textarea id="description" required></textarea>
+
+                <label for="date">Date:</label>
+                <input type="date" id="date" required>
+
+                <label for="organizationName">Name of the Organization:</label>
+                <input type="text" id="organizationName" required>
+                <button type="submit">Submit Report</button>
+            </form>
+        </div>
+
+    </main>
+    <footer>
+        <p>&copy; 2023 City of Hamusit. All rights reserved .መብቱ በህግ የተጠበቀ ነው || Created by Muluadam Getaneh Limenih</p>
+    </footer>
+</body>
+
+</html>
